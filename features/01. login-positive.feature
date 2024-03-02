@@ -1,12 +1,8 @@
-Feature: The Internet Guinea Pig Website
+@digital-skola @login
+Feature: Swag Labs - Login - Positive
 
-  Scenario Outline: As a user, I can log into the secure area
-
-    Given I am on the login page
-    When I login with <username> and <password>
-    Then I should see a flash message saying <message>
-
-    Examples:
-      | username | password             | message                        |
-      | tomsmith | SuperSecretPassword! | You logged into a secure area! |
-      | foobar   | barfoo               | Your username is invalid!      |
+  @positive
+  Scenario: As a standard_user, I want to log in successfully
+    Given Teguh is on the login page
+    When Teguh login with "standard_user" credential
+    And Teguh should see home page
